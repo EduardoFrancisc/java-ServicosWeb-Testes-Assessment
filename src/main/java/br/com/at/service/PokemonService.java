@@ -59,6 +59,6 @@ public class PokemonService {
 
     public List<Pokemon> filterByName(String nome) {
         List<Pokemon> all = getAll();
-        return all.stream().filter(cliente -> cliente.getNome().startsWith(nome)).toList();
+        return all.stream().filter(pokemon -> pokemon.getNome().startsWith(nome)).toList();
     }
 }

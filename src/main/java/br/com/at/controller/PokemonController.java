@@ -53,7 +53,7 @@ public class PokemonController {
         try {
             pokemonService.deleteById(id);
             return ResponseEntity.status(HttpStatus.ACCEPTED)
-                    .body((new ResponsePayload("Cliente deletado com sucesso!")));
+                    .body((new ResponsePayload("Pokemon deletado com sucesso!")));
         }catch (ResorceNotFoundException ex){
             return  ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(new ResponsePayload(ex.getMessage()));
@@ -65,7 +65,7 @@ public class PokemonController {
         try {
             pokemonService.update(id,atualizado);
             return ResponseEntity.status(HttpStatus.ACCEPTED)
-                    .body(new ResponsePayload("Cliente alterado com sucesso!"));
+                    .body(new ResponsePayload("Pokemon alterado com sucesso!"));
         }catch (ResorceNotFoundException ex){
             return  ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(new ResponsePayload(ex.getMessage()));
